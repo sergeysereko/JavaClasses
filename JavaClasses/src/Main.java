@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
+       /*
         //тестирование класса human
         Human human1 = new Human();
         Human human2 = new Human("Евгений");
@@ -120,8 +120,63 @@ public class Main {
         Country country8 = new Country();
         country8.inputCountry(countryC,conti,countPeo,phoneC,capi,citie);
         System.out.println(country8.toString());
+      */
 
+        Fraction fraction1 = new Fraction();
+        Fraction fraction2 = new Fraction(3);
+        Fraction fraction3 = new Fraction(5,8);
 
+        fraction1.outputFraction(fraction1);
+        System.out.println(fraction2.toString());
+        System.out.println(fraction3.toString());
+
+        System.out.print("Введите чеслитель первой дроби: ");
+        int num1 = scanner.nextInt();
+        System.out.print("Введите знаменатель первой дроби: ");
+        int denom1 = scanner.nextInt();
+
+        System.out.print("Введите чеслитель второй дроби: ");
+        int num2 = scanner.nextInt();
+        System.out.print("Введите знаменатель второй дроби: ");
+        int denom2 = scanner.nextInt();
+
+        Fraction fraction4 = new Fraction(num1,denom1);
+        Fraction fraction5 = new Fraction(num2,denom2);
+
+        fraction4.outputFraction(fraction4);
+        fraction5.outputFraction(fraction5);
+
+        System.out.print("Какое действие хотите выполнить?: \n" +
+                "Сложение - кнопка 1\n" +
+                "Вычитание - кнопка 2\n" +
+                "Умножение - кнопка 3\n" +
+                "Деление - кнопка 4\n");
+        int select = scanner.nextInt();
+
+        if(select == 1){
+            Fraction sumResult = fraction4.add(fraction5);
+            System.out.print("Сумма: ");
+            sumResult.outputFraction(sumResult);
+        }
+        else if(select == 2){
+            Fraction subtractResult = fraction4.subtract(fraction5);
+            System.out.print("Разность: ");
+            subtractResult.outputFraction(subtractResult);
+        }
+        else if(select == 3)
+        {
+            Fraction multiplyResult = fraction4.multiply(fraction5);
+            System.out.print("Произведение: ");
+            multiplyResult.outputFraction(multiplyResult);
+        }
+        else if (select == 4) {
+            Fraction divideResult = fraction4.divide(fraction5);
+            System.out.print("Ресультат деления: ");
+            divideResult.outputFraction(divideResult);
+        }
+        else{
+            System.out.print("Значение должно быть от 1 до 4");
+        }
     }
 
 
