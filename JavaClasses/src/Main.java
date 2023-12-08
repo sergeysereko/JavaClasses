@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        //
+        //тестирование класса human
         Human human1 = new Human();
         Human human2 = new Human("Евгений");
         Human human3 = new Human("Анатолий", "Анатольевич");
@@ -72,16 +72,57 @@ public class Main {
         System.out.print("Введите страну: ");
         String countr = scanner.nextLine();
         System.out.print("Введите количество жителей в городе: ");
-        Integer countP = scanner.nextInt();
+        int countP = scanner.nextInt();
         System.out.print("Введите индекс города: ");
-        Integer postcode = scanner.nextInt();
+        int postcode = scanner.nextInt();
         System.out.print("Введите телефонный код города: ");
-        Integer phonecode = scanner.nextInt();
+        int phonecode = scanner.nextInt();
 
 
         City city8 = new City();
         city8.inputDataCity(ci,region,countr,countP,postcode,phonecode);
         System.out.println(city8.toString());
 
+
+        Country country1 = new Country();
+        Country country2 = new Country("Польша");
+        Country country3 = new Country("Германия","Европа");
+        Country country4 = new Country("CША","Северная Америка",331900000);
+        Country country5 = new Country("Китай","Азия",1412000000,86);
+        Country country6 = new Country("Япония","Азия",125700000,81,"Токио");
+        Country country7 = new Country("Италия","Европа",59110000,39,"Рим","Рим","Венеция","Флоренция","Верона");
+
+
+        country1.outputCountry(country1);
+        System.out.println(country2.toString());
+        System.out.println(country3.toString());
+        System.out.println(country4.toString());
+        System.out.println(country5.toString());
+        System.out.println(country6.toString());
+        System.out.println(country7.toString());
+
+        scanner.nextLine();
+        System.out.print("Введите название страны: ");
+        String countryC = scanner.nextLine();
+        System.out.print("Континент: ");
+        String conti = scanner.nextLine();
+        System.out.print("Население: ");
+        long countPeo = scanner.nextLong();
+        System.out.print("Тел.код страны: ");
+        int phoneC = scanner.nextInt();
+        scanner.nextLine();
+        System.out.print("Столица: ");
+        String capi = scanner.nextLine();
+        System.out.print("Города: ");
+        String citie = scanner.nextLine();
+
+
+        Country country8 = new Country();
+        country8.inputCountry(countryC,conti,countPeo,phoneC,capi,citie);
+        System.out.println(country8.toString());
+
+
     }
+
+
 }

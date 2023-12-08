@@ -6,7 +6,7 @@
 класса для ввода данных, вывода данных, реализуйте
 доступ к отдельным полям через методы класса.*/
 
-import java.time.LocalDate;
+
 public class Human {
     private String name;
     private String middleName;
